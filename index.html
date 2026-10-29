@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop on Quantum Algorithms and Cryptography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #353c46;
+            color: #fff;
+            padding: 32px 0 18px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.1rem;
+            margin: 0;
+        }
+        header p {
+            color: #d3dae6;
+            margin: 0.5em 0 0 0;
+        }
+        .picture-container {
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+        .main-image {
+            max-width: 340px;
+            width: 40%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(44,55,66,0.08);
+        }
+        section {
+            padding: 22px 5vw;
+            margin-bottom: 18px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(60,70,90,0.05);
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: #353c46;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 1.1rem;
+            color: #374256;
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0 18px 0;
+        }
+        th, td {
+            border: 1px solid #e4e8f0;
+            padding: 9px 12px;
+            text-align: left;
+        }
+        th {
+            background: #dbe0e9;
+            color: #3a405a;
+        }
+        tr:nth-child(even) {
+            background: #f4f6fa;
+        }
+        a.button {
+            display: inline-block;
+            padding: 8px 18px;
+            background: #4b8edc;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.18s;
+        }
+        a.button:hover {
+            background: #2f6ab6;
+        }
+
+        /* Speakers/Organizers/Sponsors Grid */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 12px;
+        }
+        .person-card {
+            background: #f4f6fa;
+            border-radius: 9px;
+            box-shadow: 0 2px 7px rgba(90,90,110,0.05);
+            padding: 12px 16px 18px 16px;
+            text-align: center;
+            width: 220px;
+        }
+        .person-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            background: #dae0ee;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(44,55,66,0.09);
+        }
+        .person-name {
+            font-weight: 600;
+            color: #353c46;
+            font-size: 1.03em;
+            margin-top: 4px;
+        }
+        .person-affiliation {
+            color: #3d6b94;
+            font-size: 0.98em;
+        }
+        /* Sponsor */
+        .sponsor-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 38px 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .sponsor-card {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .sponsor-logo {
+            width: 120px;
+            height: 50px;
+            object-fit: contain;
+            background: #eaeef4;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px #cfd6e0;
+            margin-bottom: 7px;
+        }
+        .sponsor-name {
+            color: #27436a;
+            font-weight: 500;
+            font-size: 1.05em;
+        }
+
+        @media (max-width: 700px) {
+            section {
+                padding: 12px 2vw;
+            }
+            .card-grid, .sponsor-grid {
+                gap: 20px 8px;
+            }
+            .person-card {
+                width: 95vw;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> Workshop on Quantum Algorithms and Cryptography</h1>
+    <h1> December 14 – 15, 2025 </h1>
+    <p> Pre-conference workshop, FSTTCS 2025, BITS Goa</p>
+</header>
+
+<!-- <div class="picture-container">
+    <img src="centerpic.jpg" alt="Workshop visual" class="main-image">
+</div> -->
+
+<section>
+    <h2>Overview</h2>
+    <p>
+        Traditional cryptography measures security by ruling out polynomial-time attacks, but these classifications can be too coarse for modern applications[attached_file:1].
+        Fine-grained cryptography tackles this by focusing on the exact complexities of attacks and the corresponding security guarantees, bridging the gap between worst-case and average-case hardness, and providing stronger foundations for cryptographic constructions[attached_file:1].
+    </p>
+</section>
+
+<section>
+    <h2>Speakers</h2>
+    <div class="card-grid">
+        <div class="person-card">
+            <img src="speaker-shweta.png" class="person-photo" alt="Shweta Agrawal">
+            <div class="person-name">Shweta Agrawal</div>
+            <div class="person-affiliation">IIT Madras</div>
+        </div>
+        <div class="person-card">
+            <img src="speaker-jaikumar.jpg" class="person-photo" alt="Jaikumar Radhakrishnan">
+            <div class="person-name">Jaikumar Radhakrishnan</div>
+            <div class="person-affiliation">ICTS Bengaluru</div>
+        </div>
+        <div class="person-card">
+            <img src="speaker-nitin.JPEG" class="person-photo" alt="Nitin Saurabh">
+            <div class="person-name">Nitin Saurabh</div>
+            <div class="person-affiliation">IIT Hyderabad</div>
+        </div>
+        <div class="person-card">
+            <img src="speaker-kv.jpeg" class="person-photo" alt="K.V. Subrahmanyam">
+            <div class="person-name">K.V. Subrahmanyam</div>
+            <div class="person-affiliation">Chennai Mathematical Institute</div>
+        </div>
+        <div class="person-card">
+            <img src="speaker-dhinakaran.jpeg" class="person-photo" alt="Dhinakaran Vinayagamurthy">
+            <div class="person-name">Dhinakaran Vinayagamurthy</div>
+            <div class="person-affiliation">IBM Research
+                Bangalore</div>
+        </div>
+        <!--<div class="person-card">
+            <img src="speaker-golovnev.jpg" class="person-photo" alt="Sasha Golovnev">
+            <div class="person-name">Sasha Golovnev</div>
+            <div class="person-affiliation">NYU Courant</div>
+        </div>
+        <div class="person-card">
+            <img src="speaker-stephens.jpg" class="person-photo" alt="Noah Stephens-Davidowitz">
+            <div class="person-name">Noah Stephens-Davidowitz</div>
+            <div class="person-affiliation">NYU & Columbia</div>
+        </div>
+        <div class="person-card">
+            <img src="speaker-aggarwal.jpg" class="person-photo" alt="Divesh Aggarwal">
+            <div class="person-name">Divesh Aggarwal</div>
+            <div class="person-affiliation">National University of Singapore</div>
+        </div>-->
+    </div>
+</section>
+
+
+<section>
+    <h2>Participation & Registration</h2>
+    <p>
+        Secure your spot at the workshop! Registration is open to students and professionals worldwide. <br>
+        <a href="https://finecrypto.github.io/register" class="button">Register Here</a>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Early Registration<br/>(till Nov 10 AoE)</th>
+                <th>Regular Registration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Indian Student</td>
+                <td>₹ 800</td>
+                <td>₹ 1300</td>
+            </tr>
+            <tr>
+                <td>Indian Non-Student</td>
+                <td>₹ 1500</td>
+                <td>₹ 2000</td>
+            </tr>
+            <tr>
+                <td>All Others</td>
+                <td>₹ 3000 (35 USD)</td>
+                <td>₹ 3500 (40 USD)</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Speaker</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9.00AM - 10.00AM</td>
+                <td>Amir Abboud</td>
+                <td>Fine-Grained Complexity of Polynomial Time Problems: An Overview</td>
+            </tr>
+            <tr>
+                <td>10.00AM - 10.45AM</td>
+                <td>Sidhant Saraogi</td>
+                <td>Fine Grained Cryptography for Circuits</td>
+            </tr>
+            <tr>
+                <td>10.45AM - 11.15AM</td>
+                <td colspan="2">Coffee Break</td>
+            </tr>
+            <tr>
+                <td>11.15AM - 12.00PM</td>
+                <td>Subhashree Patro</td>
+                <td>Quantum Fine-Grained Complexity</td>
+            </tr>
+            <tr>
+                <td>12.00PM - 12.45PM</td>
+                <td>Rajendra Kumar</td>
+                <td>Foundations of Lattice based Cryptography</td>
+            </tr>
+            <tr>
+                <td>12.45PM - 2.15PM</td>
+                <td colspan="2">Lunch</td>
+            </tr>
+            <tr>
+                <td>2.15PM - 3.15PM</td>
+                <td>Alon Rosen</td>
+                <td>Public-Key Encryption, Local Pseudorandom Generators, and the Low-Degree Method</td>
+            </tr>
+            <tr>
+                <td>3.15PM - 4.00PM</td>
+                <td>Sasha Golovnev</td>
+                <td>Fine-Grained Worst-Case to Average-Case Reductions</td>
+            </tr>
+            <tr>
+                <td>4.00PM - 4.30PM</td>
+                <td colspan="2">Coffee Break</td>
+            </tr>
+            <tr>
+                <td>4.30PM - 5.30PM</td>
+                <td>Noah Stephens-Davidowitz</td>
+                <td>Fine-grained hardness of lattice and coding problems</td>
+            </tr>
+            <tr>
+                <td>5.30PM - 6.00PM</td>
+                <td>Divesh Aggarwal</td>
+                <td>Why we couldn't prove SETH hardness of the Closest Vector Problem for even norms, and of the Subset Sum Problem!</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<section>
+    <h2>Organizers</h2>
+    <div class="card-grid">
+        <div class="person-card">
+            <img src="organizer-example1.jpg" class="person-photo" alt="Organizer 1">
+            <div class="person-name">[Name 1]</div>
+            <div class="person-affiliation">IIT Madras</div>
+        </div>
+        <div class="person-card">
+            <img src="organizer-example2.jpg" class="person-photo" alt="Organizer 2">
+            <div class="person-name">[Name 2]</div>
+            <div class="person-affiliation">IIT Madras</div>
+        </div>
+        <!-- Add more organizer cards as needed -->
+    </div>
+</section>
+
+<section>
+    <h2>Sponsors</h2>
+    <div class="sponsor-grid">
+        <div class="sponsor-card">
+            <img src="sponsor1-logo.png" class="sponsor-logo" alt="Sponsor 1 Logo">
+            <div class="sponsor-name">Tech Council India</div>
+        </div>
+        <div class="sponsor-card">
+            <img src="sponsor2-logo.png" class="sponsor-logo" alt="Sponsor 2 Logo">
+            <div class="sponsor-name">QuantumX Labs</div>
+        </div>
+        <!-- Add more sponsor cards as needed -->
+    </div>
+</section>
+
+<section>
+    <h2>Location</h2>
+    <p>
+       The workshop will be held at the <strong>Mini Auditorium (EG03)</strong>, IITM Research Park, Building E, Ground Floor, adjacent to the IIT Madras campus in Chennai[attached_file:1].
+    </p>
+</section>
+
+<footer>
+    Fine-Grained Cryptography Workshop &copy; 2025 | IIT Madras
+</footer>
+</body>
+</html>
