@@ -187,6 +187,66 @@
     .registration-button:hover { color: #fff; background: var(--blue-dark); }
     .fine-print { margin: 15px 0 0; color: #77839a; font-size: .84rem; }
 
+    /* Clear, accessible workshop programme */
+    .schedule-summary {
+      display: flex; flex-wrap: wrap; gap: 9px; margin: 0 0 18px;
+    }
+    .schedule-summary span {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 6px 11px; border: 1px solid #dce6f5; border-radius: 999px;
+      background: #f6f9ff; color: #38557f; font-size: .82rem; font-weight: 700;
+    }
+    .schedule-summary strong { color: #1e3d70; }
+    .schedule-scroll {
+      overflow-x: auto; border: 1px solid #dfe6f0; border-radius: 13px;
+      background: #fff; -webkit-overflow-scrolling: touch;
+    }
+    .schedule-table {
+      width: 100%; min-width: 620px; border-collapse: separate; border-spacing: 0;
+      text-align: left;
+    }
+    .schedule-table caption {
+      padding: 13px 17px; color: #62718a; background: #f8faff;
+      border-bottom: 1px solid #e4eaf3; text-align: left; font-size: .86rem;
+    }
+    .schedule-table thead th {
+      padding: 13px 17px; color: #fff; background: #1b3157;
+      font-size: .76rem; font-weight: 800; letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .schedule-table thead th:first-child { width: 19%; }
+    .schedule-table thead th:nth-child(2) { width: 39%; }
+    .schedule-table thead th:last-child { width: 42%; }
+    .schedule-table tbody td {
+      padding: 15px 17px; border-bottom: 1px solid #e9edf4;
+      vertical-align: middle; color: #35445e;
+    }
+    .schedule-table tbody tr:last-child td { border-bottom: 0; }
+    .schedule-table tbody tr:not(.break-row):nth-child(even) td { background: #fbfcff; }
+    .schedule-time {
+      color: #244b8c !important; font-variant-numeric: tabular-nums;
+      font-weight: 800; white-space: nowrap; font-size: .94rem;
+    }
+    .schedule-speaker strong {
+      display: block; color: #1d2c49; font-size: .97rem; line-height: 1.4;
+    }
+    .schedule-speaker span {
+      display: block; margin-top: 3px; color: #687790; font-size: .84rem;
+      line-height: 1.4;
+    }
+    .schedule-talk { color: #31425f !important; font-weight: 650; }
+    .break-row td { background: #f1f5fb !important; border-bottom-color: #e0e8f3 !important; }
+    .break-row .schedule-time { color: #5b6e8c !important; }
+    .break-label {
+      display: inline-flex; align-items: center; gap: 9px;
+      color: #344b6e; font-weight: 800;
+    }
+    .break-label::before {
+      content: ""; width: 7px; height: 7px; flex: 0 0 7px;
+      border-radius: 50%; background: #87a4cf;
+    }
+    .schedule-note { margin: 11px 0 0; color: #77839a; font-size: .82rem; }
+
     .announcement {
       display: flex; align-items: flex-start; gap: 16px; padding: 20px 22px;
       background: #f7f9fc; border: 1px dashed #cbd5e3; border-radius: 12px;
@@ -398,15 +458,80 @@
       <div class="section-heading">
         <div>
           <p class="section-kicker">Plan your day</p>
-          <h2 id="schedule-title">Schedule</h2>
+          <h2 id="schedule-title">Workshop schedule</h2>
         </div>
+        <p class="section-intro">Seven talks, with dedicated breaks for refreshments and lunch.</p>
       </div>
-      <div class="announcement">
-        <span class="announcement-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.2 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-        </span>
-        <div><h3>Talk timings and session titles will be announced</h3><p>The detailed programme is not yet available in the supplied page. This section is ready to be updated when the schedule is confirmed.</p></div>
+
+      <div class="schedule-summary" aria-label="Schedule overview">
+        <span><strong>9:00 AM–5:30 PM</strong> Programme</span>
+        <span><strong>7</strong> Talks</span>
+        <span><strong>2</strong> Tea breaks</span>
+        <span><strong>1</strong> Lunch break</span>
       </div>
+
+      <div class="schedule-scroll" role="region" aria-label="Workshop schedule table" tabindex="0">
+        <table class="schedule-table">
+          <caption>Talks and breaks throughout the day</caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Speaker</th>
+              <th scope="col">Talk / session</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="schedule-time"><time>9:00–9:50 AM</time></td>
+              <td class="schedule-speaker"><strong>Dinesh Krishnamoorthy</strong><span>IIT Palakkad</span></td>
+              <td class="schedule-talk">Adversary Method</td>
+            </tr>
+            <tr>
+              <td class="schedule-time"><time>10:00–10:50 AM</time></td>
+              <td class="schedule-speaker"><strong>Nitin Saurabh</strong><span>IIT Hyderabad</span></td>
+              <td class="schedule-talk">Polynomial Method</td>
+            </tr>
+            <tr class="break-row">
+              <td class="schedule-time"><time>11:00–11:30 AM</time></td>
+              <td colspan="2"><span class="break-label">Tea Break</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-time"><time>11:30 AM–12:20 PM</time></td>
+              <td class="schedule-speaker"><strong>Venkata Koppula</strong><span>IIT Delhi</span></td>
+              <td class="schedule-talk">Compressed Oracle</td>
+            </tr>
+            <tr class="break-row">
+              <td class="schedule-time"><time>12:30–2:00 PM</time></td>
+              <td colspan="2"><span class="break-label">Lunch Break</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-time"><time>2:00–2:45 PM</time></td>
+              <td class="schedule-speaker"><strong>Atul Singh Arora</strong><span>IIIT Hyderabad</span></td>
+              <td class="schedule-talk">Research Talk</td>
+            </tr>
+            <tr>
+              <td class="schedule-time"><time>2:45–3:30 PM</time></td>
+              <td class="schedule-speaker"><strong>Avantika Agarwal</strong><span>University of Waterloo</span></td>
+              <td class="schedule-talk">Research Talk</td>
+            </tr>
+            <tr class="break-row">
+              <td class="schedule-time"><time>3:30–4:00 PM</time></td>
+              <td colspan="2"><span class="break-label">Tea Break</span></td>
+            </tr>
+            <tr>
+              <td class="schedule-time"><time>4:00–4:45 PM</time></td>
+              <td class="schedule-speaker"><strong>Supartha Podder</strong><span>Stony Brook University</span></td>
+              <td class="schedule-talk">Research Talk</td>
+            </tr>
+            <tr>
+              <td class="schedule-time"><time>4:45–5:30 PM</time></td>
+              <td class="schedule-speaker"><strong>Naresh Boddu</strong><span>NUS</span></td>
+              <td class="schedule-talk">Research Talk</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="schedule-note">Talk titles are shown as text for now. They can be linked to presentation slides when the slides are available.</p>
     </section>
 
     <section class="section" id="organizers" aria-labelledby="organizers-title">
